@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Kalkulator Matematik</title>
+</head>
+
+<body>
+  <div class="header bg-1">
+    <h2 class="text-center">Kalkulator Matematik</h2>
+  </div>
+  <div class="container">
+    <div class="card">
+      <div class="welcome text-center">
+        <h3>Welcome to Kalkulator Matematik</h3>
+        <p>Hai sobat, Selamat datang di Kalkulator Matematik</p>
+        <p>
+          Sebuah web apps sederhana yang berfungsi untuk menghitung nilai luas
+          dan keliling bangun datar
+        </p>
+      </div>
+      <div class="change-figure">
+        <button class="btn btn-primary" onclick="changeMenu('luas')" id="luasBtn">
+          Luas Persegi
+        </button>
+        <button class="btn btn-secondary" onclick="changeMenu('keliling')" id="kelilingBtn">
+          Keliling Persegi
+        </button>
+      </div>
+      <div class="calculator-container">
+        <div id="error">
+          <p class="text-red">Error: Nilai harus berupa angka</p>
+        </div>
+        <div class="calculator-header">
+          <h2 class="text-center" id="title">Luas Persegi</h2>
+        </div>
+        <div class="calculator-body">
+          <div class="container" id="luas-body">
+            <p>Rumus Luas Persegi yaitu:</p>
+            <b>
+              <p>L = S x S</p>
+            </b>
+            <br />
+            <p>Di mana:</p>
+            <p>L = Luas</p>
+            <p>S = Sisi</p>
+          </div>
+          <div class="container" id="keliling-body">
+            <p>Rumus Keliling Persegi yaitu:</p>
+            <b>
+              <p>K = 4 x S</p>
+            </b>
+            <br />
+            <p>Di mana:</p>
+            <p>K = Keliling</p>
+            <p>S = Sisi</p>
+          </div>
+          <hr />
+          <div class="container">
+            <div class="input-container">
+              <h2 class="text-center" id="calculator-title">Hitung Luas Persegi</h2>
+              <input type="text" name="sisi" id="sisi" placeholder="Nilai Sisi" class="nilai-input" />
+            </div>
+            <div id="answer-container">
+                <p id="rumus1"></p>
+                <p id="rumus2"></p>
+                <p id="jawaban"></p>
+            </div>
+            <div class="center">
+              <button class="btn btn-primary" id="btn-hitung" onclick="hitung()">
+                Hitung
+              </button>
+            </div>
+            <div class="right">
+              <button class="btn btn-reset" id="btn-reset" onclick="resetAll()">
+                Reset
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
